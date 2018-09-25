@@ -1,0 +1,6 @@
+---
+- name: change permissions
+  file:
+    path: /Users/smogad593/file.txt
+    mode: 0755
+  tags: change-file-permission

@@ -1,0 +1,9 @@
+---
+- hosts: fluentd-servers
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - ../../group_vars/all/main.yml
+  roles:
+    - role: tesla.manage-services
+      tags: services

@@ -1,0 +1,11 @@
+[fluentd-servers]
+fluentd-1       ansible_host=34.230.6.156
+fluentd-2       ansible_host=18.235.0.168
+fluentd-3       ansible_host=18.234.66.101
+
+[fluentd-servers:vars]
+ansible_connection=ssh
+ansible_user={{ ssh_username }}
+ansible_ssh_private_key_file={{ ssh_private_key_file }}
+
+

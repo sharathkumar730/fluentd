@@ -1,0 +1,41 @@
+---
+- name: Start service
+  systemd:
+    name: td-agent
+    state: started
+    enabled: yes
+  tags: start-service
+
+- name: Confirm before stopping service
+  pause: prompt='Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort'
+  tags: stop-service
+
+- name: Stop service
+  systemd:
+    name: td-agent
+    state: stopped
+    enabled: yes
+    masked: no
+  tags: stop-service
+
+- name: Confirm before stopping service
+  pause: prompt='Are you sure you want to restart td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort'
+  tags: restart-service
+
+- name: Restart service
+  systemd:
+    name: td-agent
+    state: restarted
+    enabled: yes
+  tags: restart-service
+
+- name: Enable service
+  systemd:
+    name: td-agent
+    enabled: yes
+    masked: no
+    daemon_reload: yes
+  tags:
+    - stop-service
+    - restart-service
+    - start-service

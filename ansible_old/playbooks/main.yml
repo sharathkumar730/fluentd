@@ -1,0 +1,7 @@
+---
+- name: "1 - Manage service (start, stop, restart)"
+  import_playbook: services/main.yml
+- name: "2 - Change file properties"
+  import_playbook: file_property/main.yml
+- name: "3 - Change config files"
+  import_playbook: configs/main.yml

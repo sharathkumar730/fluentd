@@ -1,0 +1,16 @@
+---
+- name: change directly in file by condition
+  lineinfile:
+    path: /Users/smogad593/file.txt
+    regexp: '^JAVA_OPTS'
+    line: 'JAVA_OPTS="-Djava.awt.headless=true"'
+  tags: change-directly-config
+  
+- name: generate config from template
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+  with_items:
+    - { src: "{{ src_config }}", dest: "{{ dest_config }}" }
+  tags: generate-config

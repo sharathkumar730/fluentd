@@ -1,0 +1,4 @@
+---
+src_config: ./file-template-conf.j2
+dest_config: /Users/smogad593/file-another.txt
+another_java_opts: "-Dorg.jboss.net.protocol.file.decodeFilePaths=true"

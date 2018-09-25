@@ -1,0 +1,2333 @@
+2018-09-16 14:18:30,362 p=9743 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:18:30,390 p=9743 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************
+2018-09-16 14:18:30,417 p=9743 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-16 14:18:35,104 p=9743 u=smogad593 |  ok: [127.0.0.1]
+2018-09-16 14:18:35,118 p=9743 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************
+2018-09-16 14:18:35,508 p=9743 u=smogad593 |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "get_service_tools not implemented on target platform"}
+2018-09-16 14:18:35,510 p=9743 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-16 14:18:35,510 p=9743 u=smogad593 |  PLAY RECAP *********************************************************************
+2018-09-16 14:18:35,510 p=9743 u=smogad593 |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-16 14:21:13,832 p=10144 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:21:13,849 p=10144 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:21:13,862 p=10144 u=smogad593 |  TASK [tesla.property-files : change permissions] *******************************
+2018-09-16 14:21:14,186 p=10144 u=smogad593 |  ok: [127.0.0.1]
+2018-09-16 14:21:14,192 p=10144 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:21:14,194 p=10144 u=smogad593 |  PLAY RECAP *********************************************************************
+2018-09-16 14:21:14,195 p=10144 u=smogad593 |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2018-09-16 14:23:24,755 p=10475 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:23:24,772 p=10475 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:23:24,779 p=10475 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:23:24,793 p=10475 u=smogad593 |  TASK [tesla.change-settings : change directly in file by condition] ************
+2018-09-16 14:23:25,115 p=10475 u=smogad593 |  ok: [127.0.0.1]
+2018-09-16 14:23:25,116 p=10475 u=smogad593 |  PLAY RECAP *********************************************************************
+2018-09-16 14:23:25,117 p=10475 u=smogad593 |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2018-09-16 14:24:17,429 p=10608 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:24:17,445 p=10608 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:24:17,451 p=10608 u=smogad593 |  PLAY [local] *******************************************************************
+2018-09-16 14:24:17,465 p=10608 u=smogad593 |  TASK [tesla.change-settings : generate config from template] *******************
+2018-09-16 14:24:18,158 p=10608 u=smogad593 |  ok: [127.0.0.1] => (item={u'dest': u'/Users/smogad593/file-another.txt', u'src': u'./file-template-conf.j2'})
+2018-09-16 14:24:18,160 p=10608 u=smogad593 |  PLAY RECAP *********************************************************************
+2018-09-16 14:24:18,160 p=10608 u=smogad593 |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2018-09-17 08:23:58,515 p=14011 u=smogad593 |  PLAY [fluentd-servers] *********************************************************
+2018-09-17 08:23:58,555 p=14011 u=smogad593 |  TASK [Gathering Facts] *********************************************************
+2018-09-17 08:23:59,562 p=14011 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:23:59,581 p=14011 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************
+2018-09-17 08:23:59,616 p=14011 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:24:51,008 p=14011 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:24:51,030 p=14011 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************
+2018-09-17 08:24:51,399 p=14011 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:24:51,401 p=14011 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:24:51,401 p=14011 u=smogad593 |  PLAY RECAP *********************************************************************
+2018-09-17 08:24:51,401 p=14011 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=1   
+2018-09-17 08:31:36,259 p=15212 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 08:31:36,283 p=15212 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 08:31:36,322 p=15212 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:31:44,342 p=15212 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:31:44,354 p=15212 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 08:31:44,892 p=15212 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:31:44,894 p=15212 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:31:44,894 p=15212 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 08:31:44,895 p=15212 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 08:38:43,060 p=16232 u=smogad593 |  ERROR! the playbook: /Users/smogad593 does not appear to be a file
+2018-09-17 08:43:46,110 p=17080 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 08:43:46,132 p=17080 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 08:43:46,173 p=17080 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:43:47,672 p=17080 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:43:47,682 p=17080 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 08:43:48,272 p=17080 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:43:48,274 p=17080 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:43:48,274 p=17080 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 08:43:48,274 p=17080 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 08:49:13,896 p=17844 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 08:49:13,919 p=17844 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 08:49:13,956 p=17844 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:49:15,296 p=17844 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:49:15,308 p=17844 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 08:49:15,896 p=17844 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:49:15,899 p=17844 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:49:15,899 p=17844 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 08:49:15,899 p=17844 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 08:55:18,107 p=18737 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 08:55:18,131 p=18737 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 08:55:18,168 p=18737 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:55:19,188 p=18737 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:55:19,200 p=18737 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 08:55:19,932 p=18737 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:55:19,934 p=18737 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:55:19,934 p=18737 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 08:55:19,934 p=18737 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 08:55:58,187 p=18845 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 08:55:58,210 p=18845 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 08:55:58,250 p=18845 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 08:55:59,167 p=18845 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 08:55:59,178 p=18845 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 08:55:59,537 p=18845 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 08:55:59,539 p=18845 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 08:55:59,539 p=18845 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 08:55:59,539 p=18845 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:08:00,996 p=20646 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 09:08:01,020 p=20646 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 09:08:01,059 p=20646 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:08:01,888 p=20646 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:08:01,899 p=20646 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 09:08:02,448 p=20646 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:08:02,450 p=20646 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:08:02,450 p=20646 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 09:08:02,451 p=20646 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:09:09,569 p=20802 u=smogad593 |  ERROR! You must specify a playbook file to run
+2018-09-17 09:10:06,435 p=20951 u=smogad593 |  ERROR! You must specify a playbook file to run
+2018-09-17 09:10:21,741 p=20980 u=smogad593 |  ERROR! You must specify a playbook file to run
+2018-09-17 09:11:18,210 p=21130 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 09:11:18,234 p=21130 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 09:11:18,269 p=21130 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:11:19,839 p=21130 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:11:19,852 p=21130 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 09:11:20,431 p=21130 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:11:20,433 p=21130 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:11:20,433 p=21130 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 09:11:20,433 p=21130 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:23:16,750 p=22929 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 09:23:16,774 p=22929 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 09:23:16,813 p=22929 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:23:18,103 p=22929 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:23:18,115 p=22929 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 09:23:19,378 p=22929 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:23:19,381 p=22929 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:23:19,381 p=22929 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 09:23:19,381 p=22929 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:29:41,089 p=23975 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 09:29:41,115 p=23975 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 09:29:41,154 p=23975 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:29:41,833 p=23975 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:29:41,845 p=23975 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 09:29:42,411 p=23975 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:29:42,414 p=23975 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:29:42,414 p=23975 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 09:29:42,414 p=23975 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:37:35,837 p=25120 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 09:37:35,862 p=25120 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 09:37:35,902 p=25120 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:37:37,852 p=25120 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:37:37,865 p=25120 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 09:37:38,498 p=25120 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:37:38,501 p=25120 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:37:38,501 p=25120 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 09:37:38,501 p=25120 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 09:38:21,667 p=25262 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************************************************************************************
+2018-09-17 09:38:21,691 p=25262 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************************************************************************************
+2018-09-17 09:38:21,729 p=25262 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 09:38:23,175 p=25262 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 09:38:23,187 p=25262 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************************************************************************************
+2018-09-17 09:38:23,554 p=25262 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 09:38:23,556 p=25262 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 09:38:23,557 p=25262 u=smogad593 |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2018-09-17 09:38:23,557 p=25262 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 10:03:23,750 p=30101 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************************************************************************************
+2018-09-17 10:03:23,774 p=30101 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************************************************************************************
+2018-09-17 10:03:23,813 p=30101 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 10:03:25,524 p=30101 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 10:03:25,535 p=30101 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************************************************************************************
+2018-09-17 10:03:26,202 p=30101 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 10:03:26,204 p=30101 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 10:03:26,204 p=30101 u=smogad593 |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2018-09-17 10:03:26,204 p=30101 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 10:23:55,914 p=32832 u=smogad593 |  PLAY [fluentd-servers] *********************************************************************************************
+2018-09-17 10:23:55,944 p=32832 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *****************************************************
+2018-09-17 10:23:55,984 p=32832 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 10:23:56,843 p=32832 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 10:23:56,855 p=32832 u=smogad593 |  TASK [tesla.manage-services : Stop service] ************************************************************************
+2018-09-17 10:23:56,911 p=32832 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2018-09-17 10:23:56,912 p=32832 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 10:23:56,913 p=32832 u=smogad593 |  PLAY RECAP *********************************************************************************************************
+2018-09-17 10:23:56,913 p=32832 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 11:09:43,732 p=41144 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************
+2018-09-17 11:09:43,764 p=41144 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************
+2018-09-17 11:09:43,803 p=41144 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 11:09:44,892 p=41144 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 11:09:44,903 p=41144 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************
+2018-09-17 11:09:44,952 p=41144 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2018-09-17 11:09:44,954 p=41144 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 11:09:44,954 p=41144 u=smogad593 |  PLAY RECAP *************************************************************************************************************************
+2018-09-17 11:09:44,954 p=41144 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 11:10:11,136 p=41225 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************
+2018-09-17 11:10:11,159 p=41225 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************
+2018-09-17 11:10:11,196 p=41225 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 11:10:12,171 p=41225 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 11:10:12,183 p=41225 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************
+2018-09-17 11:10:12,233 p=41225 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2018-09-17 11:10:12,235 p=41225 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 11:10:12,235 p=41225 u=smogad593 |  PLAY RECAP *************************************************************************************************************************
+2018-09-17 11:10:12,235 p=41225 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 11:11:31,333 p=41428 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************
+2018-09-17 11:11:31,356 p=41428 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************
+2018-09-17 11:11:31,393 p=41428 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 11:11:32,226 p=41428 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 11:11:32,237 p=41428 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************
+2018-09-17 11:12:01,661 p=41428 u=smogad593 |   [ERROR]: User interrupted execution
+
+2018-09-17 11:12:29,892 p=41700 u=smogad593 |  PLAY [fluentd-servers] *************************************************************************************************************
+2018-09-17 11:12:29,915 p=41700 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *********************************************************************
+2018-09-17 11:12:29,953 p=41700 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 11:12:30,758 p=41700 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 11:12:30,770 p=41700 u=smogad593 |  TASK [tesla.manage-services : Stop service] ****************************************************************************************
+2018-09-17 11:12:31,326 p=41700 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 11:12:31,328 p=41700 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 11:12:31,328 p=41700 u=smogad593 |  PLAY RECAP *************************************************************************************************************************
+2018-09-17 11:12:31,328 p=41700 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 11:41:40,934 p=46217 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 11:41:40,961 p=46217 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 11:41:41,000 p=46217 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop fluentd service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 11:41:43,247 p=46217 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 11:41:43,259 p=46217 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 11:41:43,839 p=46217 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Could not find the requested service fluentd: host"}
+2018-09-17 11:41:43,842 p=46217 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 11:41:43,842 p=46217 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 11:41:43,842 p=46217 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 12:15:27,381 p=51054 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:15:27,405 p=51054 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 12:15:27,443 p=51054 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 12:15:34,891 p=51054 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 12:15:34,903 p=51054 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 12:15:35,477 p=51054 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Unable to stop service td-agent: Failed to stop td-agent.service: The name org.freedesktop.PolicyKit1 was not provided by any .service files\nSee system logs and 'systemctl status td-agent.service' for details.\n"}
+2018-09-17 12:15:35,479 p=51054 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 12:15:35,479 p=51054 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 12:15:35,479 p=51054 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 12:20:46,158 p=52005 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:20:46,182 p=52005 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 12:20:46,221 p=52005 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 12:20:49,958 p=52005 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 12:20:49,969 p=52005 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 12:20:50,516 p=52005 u=smogad593 |  fatal: [fluentd-1]: FAILED! => {"changed": false, "msg": "Unable to stop service td-agent: Failed to stop td-agent.service: The name org.freedesktop.PolicyKit1 was not provided by any .service files\nSee system logs and 'systemctl status td-agent.service' for details.\n"}
+2018-09-17 12:20:50,518 p=52005 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 12:20:50,518 p=52005 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 12:20:50,518 p=52005 u=smogad593 |  fluentd-1                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-09-17 12:22:40,063 p=52282 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:22:40,088 p=52282 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 12:22:40,130 p=52282 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 12:22:41,201 p=52282 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 12:22:41,212 p=52282 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 12:22:42,882 p=52282 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 12:22:42,889 p=52282 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:22:42,895 p=52282 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:22:42,898 p=52282 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 12:22:42,898 p=52282 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 12:28:28,371 p=53138 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:28:28,393 p=53138 u=smogad593 |  TASK [tesla.manage-services : Start service] *************************************************************
+2018-09-17 12:28:29,362 p=53138 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 12:28:29,370 p=53138 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:28:29,377 p=53138 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:28:29,379 p=53138 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 12:28:29,380 p=53138 u=smogad593 |  fluentd-1                  : ok=1    changed=1    unreachable=0    failed=0   
+2018-09-17 12:46:59,238 p=55360 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:46:59,264 p=55360 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 12:46:59,302 p=55360 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 12:47:03,146 p=55360 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 12:47:03,157 p=55360 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 12:47:04,482 p=55360 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 12:47:04,490 p=55360 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:47:04,495 p=55360 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 12:47:04,497 p=55360 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 12:47:04,497 p=55360 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 13:57:46,740 p=63438 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 13:57:46,764 p=63438 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 13:57:46,804 p=63438 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 13:57:48,102 p=63438 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 13:57:48,113 p=63438 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 13:57:49,854 p=63438 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 13:57:49,861 p=63438 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 13:57:49,866 p=63438 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 13:57:49,869 p=63438 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 13:57:49,869 p=63438 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 14:24:49,417 p=67483 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:24:49,439 p=67483 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 14:24:49,480 p=67483 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to restart td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:24:50,417 p=67483 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:24:50,430 p=67483 u=smogad593 |  TASK [tesla.manage-services : Restart service] ***********************************************************
+2018-09-17 14:24:52,756 p=67483 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 14:24:52,763 p=67483 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:24:52,769 p=67483 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:24:52,771 p=67483 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 14:24:52,771 p=67483 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 14:29:40,481 p=68183 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:29:40,503 p=68183 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 14:29:40,541 p=68183 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:29:42,307 p=68183 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:29:42,319 p=68183 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 14:29:43,781 p=68183 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 14:29:43,793 p=68183 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:29:43,799 p=68183 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:29:43,801 p=68183 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 14:29:43,801 p=68183 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 14:32:32,938 p=68612 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 14:32:32,938 p=68612 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 14:32:32,951 p=68612 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 14:32:32,978 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:32,978 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,136 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,137 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,141 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,141 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,226 p=68612 u=smogad593 |  PLAYBOOK: main.yml ***************************************************************************************
+2018-09-17 14:32:33,227 p=68612 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 14:32:33,240 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,241 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,243 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,243 p=68612 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:32:33,254 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:33,266 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:33,267 p=68612 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] *******************************************
+2018-09-17 14:32:33,267 p=68612 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 14:32:33,305 p=68612 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:32:40,880 p=68612 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 7, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 14:32:33.305226", 
+    "stderr": "", 
+    "stdout": "Paused for 0.13 minutes", 
+    "stop": "2018-09-17 14:32:40.875038", 
+    "user_input": "yes"
+}
+2018-09-17 14:32:40,892 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:40,892 p=68612 u=smogad593 |  TASK [tesla.manage-services : Stop service] **************************************************************
+2018-09-17 14:32:40,892 p=68612 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 14:32:41,058 p=68612 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 14:32:41,327 p=68612 u=smogad593 |  Escalation succeeded
+2018-09-17 14:32:41,505 p=68612 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": null, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "basic.target system.slice network-online.target systemd-journald.socket", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "system.slice network-online.target", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 14:32:41,506 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,506 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,509 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,510 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,511 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,512 p=68612 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:32:41,513 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,514 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,514 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,516 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,517 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,518 p=68612 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:32:41,519 p=68612 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:32:41,520 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,520 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,521 p=68612 u=smogad593 |  META: ran handlers
+2018-09-17 14:32:41,521 p=68612 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 14:32:41,521 p=68612 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 14:33:50,147 p=68794 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:33:50,170 p=68794 u=smogad593 |  TASK [tesla.manage-services : Start service] *************************************************************
+2018-09-17 14:33:51,731 p=68794 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 14:33:51,738 p=68794 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:33:51,745 p=68794 u=smogad593 |  PLAY [fluentd-servers] ***********************************************************************************
+2018-09-17 14:33:51,748 p=68794 u=smogad593 |  PLAY RECAP ***********************************************************************************************
+2018-09-17 14:33:51,748 p=68794 u=smogad593 |  fluentd-1                  : ok=1    changed=1    unreachable=0    failed=0   
+2018-09-17 14:38:26,190 p=69463 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:38:26,213 p=69463 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:38:26,249 p=69463 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:38:28,241 p=69463 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:38:28,253 p=69463 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:38:29,788 p=69463 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 14:38:29,795 p=69463 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:38:29,801 p=69463 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:38:29,803 p=69463 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:38:29,803 p=69463 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 14:38:56,516 p=69549 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 14:38:56,516 p=69549 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 14:38:56,528 p=69549 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 14:38:56,556 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,557 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,703 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,703 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,707 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,707 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,787 p=69549 u=smogad593 |  PLAYBOOK: main.yml ***********************************************************************************************
+2018-09-17 14:38:56,787 p=69549 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 14:38:56,799 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,800 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,802 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,802 p=69549 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:38:56,813 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:38:56,824 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:38:56,825 p=69549 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:38:56,825 p=69549 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 14:38:56,863 p=69549 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:39:00,042 p=69549 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 3, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 14:38:56.863075", 
+    "stderr": "", 
+    "stdout": "Paused for 0.05 minutes", 
+    "stop": "2018-09-17 14:39:00.037427", 
+    "user_input": ""
+}
+2018-09-17 14:39:00,052 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,052 p=69549 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:39:00,052 p=69549 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 14:39:00,220 p=69549 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 14:39:00,504 p=69549 u=smogad593 |  Escalation succeeded
+2018-09-17 14:39:00,683 p=69549 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": null, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "basic.target system.slice network-online.target systemd-journald.socket", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "system.slice network-online.target", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 14:39:00,684 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,684 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,687 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,688 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,690 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,690 p=69549 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:39:00,692 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,692 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,693 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,694 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,695 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,697 p=69549 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:39:00,697 p=69549 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:39:00,699 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,699 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,699 p=69549 u=smogad593 |  META: ran handlers
+2018-09-17 14:39:00,700 p=69549 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:39:00,700 p=69549 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 14:44:13,099 p=70309 u=smogad593 |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to have been in '/Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml': line 31, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Enable service
+  ^ here
+
+2018-09-17 14:44:50,936 p=70476 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 14:44:50,936 p=70476 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 14:44:50,949 p=70476 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 14:44:50,974 p=70476 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:44:50,975 p=70476 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:44:50,978 p=70476 u=smogad593 |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to have been in '/Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml': line 31, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Enable service
+  ^ here
+
+2018-09-17 14:45:38,995 p=70613 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 14:45:38,995 p=70613 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 14:45:39,008 p=70613 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 14:45:39,039 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,039 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,199 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,199 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,203 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,203 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,285 p=70613 u=smogad593 |  PLAYBOOK: main.yml ***********************************************************************************************
+2018-09-17 14:45:39,286 p=70613 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 14:45:39,298 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,299 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,301 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,301 p=70613 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:45:39,313 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:39,325 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:39,325 p=70613 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:45:39,326 p=70613 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 14:45:39,363 p=70613 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:45:45,985 p=70613 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 6, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 14:45:39.363407", 
+    "stderr": "", 
+    "stdout": "Paused for 0.11 minutes", 
+    "stop": "2018-09-17 14:45:45.980629", 
+    "user_input": "yes"
+}
+2018-09-17 14:45:45,995 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:45,995 p=70613 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:45:45,995 p=70613 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 14:45:46,163 p=70613 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 14:45:46,506 p=70613 u=smogad593 |  Escalation succeeded
+2018-09-17 14:45:46,693 p=70613 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": null, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "basic.target system.slice network-online.target systemd-journald.socket", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "system.slice network-online.target", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 14:45:46,693 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,694 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,697 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,698 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,699 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,700 p=70613 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:45:46,701 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,702 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,702 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,704 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,705 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,706 p=70613 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 14:45:46,707 p=70613 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:45:46,708 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,709 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,709 p=70613 u=smogad593 |  META: ran handlers
+2018-09-17 14:45:46,709 p=70613 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:45:46,710 p=70613 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 14:46:19,227 p=70721 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:46:19,248 p=70721 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:46:19,288 p=70721 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:46:22,120 p=70721 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:46:22,131 p=70721 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:46:22,581 p=70721 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:46:22,588 p=70721 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:46:22,593 p=70721 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:46:22,595 p=70721 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:46:22,596 p=70721 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 14:54:35,285 p=71904 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:54:35,308 p=71904 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:54:35,344 p=71904 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:54:35,439 p=71904 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:54:35,451 p=71904 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:54:36,697 p=71904 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:54:36,704 p=71904 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:54:36,710 p=71904 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:54:36,712 p=71904 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:54:36,712 p=71904 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 14:56:18,832 p=72162 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:56:18,855 p=72162 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 14:56:18,894 p=72162 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 14:56:19,805 p=72162 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:56:19,817 p=72162 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 14:56:20,414 p=72162 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 14:56:20,421 p=72162 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:56:20,427 p=72162 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 14:56:20,429 p=72162 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 14:56:20,429 p=72162 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-09-17 15:01:46,502 p=72959 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:01:46,524 p=72959 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:01:46,562 p=72959 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:01:47,370 p=72959 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:01:47,381 p=72959 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:01:48,347 p=72959 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:01:48,358 p=72959 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:01:48,616 p=72959 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:01:48,623 p=72959 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:01:48,630 p=72959 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:01:48,633 p=72959 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:01:48,633 p=72959 u=smogad593 |  fluentd-1                  : ok=3    changed=0    unreachable=0    failed=0   
+2018-09-17 15:03:58,374 p=73380 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:03:58,396 p=73380 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:03:58,434 p=73380 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to restart td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:04:00,383 p=73380 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:04:00,394 p=73380 u=smogad593 |  TASK [tesla.manage-services : Restart service] *******************************************************************
+2018-09-17 15:04:01,993 p=73380 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 15:04:02,003 p=73380 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:04:02,437 p=73380 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:04:02,444 p=73380 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:04:02,449 p=73380 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:04:02,452 p=73380 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:04:02,452 p=73380 u=smogad593 |  fluentd-1                  : ok=3    changed=1    unreachable=0    failed=0   
+2018-09-17 15:09:13,833 p=74134 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:09:13,855 p=74134 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:09:13,893 p=74134 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:09:15,283 p=74134 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:09:15,295 p=74134 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:09:21,437 p=74134 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:09:21,448 p=74134 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:09:31,574 p=74134 u=smogad593 |  fatal: [fluentd-1]: UNREACHABLE! => {"changed": false, "msg": "SSH Error: data could not be sent to remote host \"34.230.6.156\". Make sure this host can be reached over ssh", "unreachable": true}
+2018-09-17 15:09:31,576 p=74134 u=smogad593 |  	to retry, use: --limit @/Users/smogad593/Documents/ansible/playbooks/main.retry
+
+2018-09-17 15:09:31,576 p=74134 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:09:31,577 p=74134 u=smogad593 |  fluentd-1                  : ok=2    changed=0    unreachable=1    failed=0   
+2018-09-17 15:09:56,343 p=74247 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:09:56,366 p=74247 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:09:56,403 p=74247 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:09:58,600 p=74247 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:09:58,611 p=74247 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:10:02,359 p=74247 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:10:02,369 p=74247 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:10:13,031 p=74247 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:10:13,038 p=74247 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:10:13,044 p=74247 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:10:13,046 p=74247 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:10:13,046 p=74247 u=smogad593 |  fluentd-1                  : ok=3    changed=0    unreachable=0    failed=0   
+2018-09-17 15:16:31,578 p=75209 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 15:16:31,578 p=75209 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 15:16:31,592 p=75209 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 15:16:31,618 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,619 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,777 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,777 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,781 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,782 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,865 p=75209 u=smogad593 |  PLAYBOOK: main.yml ***********************************************************************************************
+2018-09-17 15:16:31,865 p=75209 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 15:16:31,878 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,879 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,881 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,882 p=75209 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:16:31,893 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:31,905 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:31,905 p=75209 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:16:31,905 p=75209 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 15:16:31,943 p=75209 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:16:34,750 p=75209 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 2, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 15:16:31.942974", 
+    "stderr": "", 
+    "stdout": "Paused for 0.05 minutes", 
+    "stop": "2018-09-17 15:16:34.745428", 
+    "user_input": ""
+}
+2018-09-17 15:16:34,761 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:34,761 p=75209 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:16:34,761 p=75209 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 15:16:34,931 p=75209 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:16:35,370 p=75209 u=smogad593 |  Escalation succeeded
+2018-09-17 15:16:35,563 p=75209 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "network-online.target system.slice systemd-journald.socket basic.target", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "network-online.target system.slice", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:16:35,574 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,574 p=75209 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:16:35,574 p=75209 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:32
+2018-09-17 15:16:35,614 p=75209 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:16:35,680 p=75209 u=smogad593 |  Escalation succeeded
+2018-09-17 15:16:35,893 p=75209 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": true, 
+            "enabled": true, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": null, 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "network-online.target basic.target systemd-journald.socket system.slice", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "network-online.target system.slice", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:16:35,894 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,894 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,897 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,899 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,900 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,900 p=75209 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:16:35,902 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,902 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,902 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,904 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,905 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,907 p=75209 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:16:35,907 p=75209 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:16:35,909 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,909 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,909 p=75209 u=smogad593 |  META: ran handlers
+2018-09-17 15:16:35,910 p=75209 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:16:35,910 p=75209 u=smogad593 |  fluentd-1                  : ok=3    changed=0    unreachable=0    failed=0   
+2018-09-17 15:23:49,009 p=76337 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 15:23:49,010 p=76337 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 15:23:49,023 p=76337 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 15:23:49,050 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,050 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,207 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,208 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,212 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,212 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,296 p=76337 u=smogad593 |  PLAYBOOK: main.yml ***********************************************************************************************
+2018-09-17 15:23:49,297 p=76337 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 15:23:49,309 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,310 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,311 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,312 p=76337 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:23:49,323 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:49,336 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:49,336 p=76337 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:23:49,336 p=76337 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 15:23:49,373 p=76337 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:23:51,878 p=76337 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 2, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 15:23:49.372821", 
+    "stderr": "", 
+    "stdout": "Paused for 0.04 minutes", 
+    "stop": "2018-09-17 15:23:51.873432", 
+    "user_input": ""
+}
+2018-09-17 15:23:51,888 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:51,889 p=76337 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:23:51,889 p=76337 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 15:23:52,061 p=76337 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:23:52,341 p=76337 u=smogad593 |  Escalation succeeded
+2018-09-17 15:23:53,770 p=76337 u=smogad593 |  changed: [fluentd-1] => {
+    "changed": true, 
+    "enabled": false, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": false, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestamp": "Mon 2018-09-17 19:22:39 UTC", 
+        "ActiveEnterTimestampMonotonic": "9262738", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "active", 
+        "After": "systemd-journald.socket basic.target system.slice network-online.target", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "yes", 
+        "AssertTimestamp": "Mon 2018-09-17 19:22:37 UTC", 
+        "AssertTimestampMonotonic": "7710605", 
+        "Before": "shutdown.target multi-user.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "yes", 
+        "ConditionTimestamp": "Mon 2018-09-17 19:22:37 UTC", 
+        "ConditionTimestampMonotonic": "7710604", 
+        "Conflicts": "shutdown.target", 
+        "ControlGroup": "/system.slice/td-agent.service", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "3227", 
+        "ExecMainStartTimestamp": "Mon 2018-09-17 19:22:39 UTC", 
+        "ExecMainStartTimestampMonotonic": "9262702", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[Mon 2018-09-17 19:22:37 UTC] ; stop_time=[Mon 2018-09-17 19:22:39 UTC] ; pid=3168 ; code=exited ; status=0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestamp": "Mon 2018-09-17 19:22:37 UTC", 
+        "InactiveExitTimestampMonotonic": "7710941", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "3227", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "running", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "enabled", 
+        "User": "td-agent", 
+        "WantedBy": "multi-user.target", 
+        "Wants": "system.slice network-online.target", 
+        "WatchdogTimestamp": "Mon 2018-09-17 19:22:39 UTC", 
+        "WatchdogTimestampMonotonic": "9262715", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:23:53,781 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:53,782 p=76337 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:23:53,782 p=76337 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:32
+2018-09-17 15:23:53,820 p=76337 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:23:53,884 p=76337 u=smogad593 |  Escalation succeeded
+2018-09-17 15:23:54,217 p=76337 u=smogad593 |  changed: [fluentd-1] => {
+    "changed": true, 
+    "enabled": false, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": true, 
+            "enabled": false, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": null, 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "systemd-journald.socket network-online.target basic.target system.slice", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "network-online.target system.slice", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:23:54,218 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,219 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,222 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,223 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,224 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,225 p=76337 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:23:54,226 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,227 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,227 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,229 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,230 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,231 p=76337 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:23:54,231 p=76337 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:23:54,233 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,233 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,234 p=76337 u=smogad593 |  META: ran handlers
+2018-09-17 15:23:54,234 p=76337 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:23:54,234 p=76337 u=smogad593 |  fluentd-1                  : ok=3    changed=2    unreachable=0    failed=0   
+2018-09-17 15:25:12,944 p=76552 u=smogad593 |  ansible-playbook 2.6.4
+  config file = /Users/smogad593/Documents/ansible/ansible.cfg
+  configured module search path = [u'/Users/smogad593/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.15 (default, Aug 22 2018, 16:36:18) [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)]
+2018-09-17 15:25:12,944 p=76552 u=smogad593 |  Using /Users/smogad593/Documents/ansible/ansible.cfg as config file
+2018-09-17 15:25:12,956 p=76552 u=smogad593 |  Parsed /Users/smogad593/Documents/ansible/inventories/dev/hosts inventory source with ini plugin
+2018-09-17 15:25:12,984 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:12,984 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,133 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,133 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,137 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,138 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,218 p=76552 u=smogad593 |  PLAYBOOK: main.yml ***********************************************************************************************
+2018-09-17 15:25:13,219 p=76552 u=smogad593 |  3 plays in playbooks/main.yml
+2018-09-17 15:25:13,230 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,232 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,233 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,234 p=76552 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:25:13,245 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:13,257 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:13,258 p=76552 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:25:13,258 p=76552 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:9
+2018-09-17 15:25:13,298 p=76552 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:25:15,554 p=76552 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "delta": 2, 
+    "echo": true, 
+    "rc": 0, 
+    "start": "2018-09-17 15:25:13.297567", 
+    "stderr": "", 
+    "stdout": "Paused for 0.04 minutes", 
+    "stop": "2018-09-17 15:25:15.549090", 
+    "user_input": ""
+}
+2018-09-17 15:25:15,566 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:15,566 p=76552 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:25:15,566 p=76552 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:13
+2018-09-17 15:25:15,738 p=76552 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:25:16,016 p=76552 u=smogad593 |  Escalation succeeded
+2018-09-17 15:25:16,209 p=76552 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": "stopped", 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "state": "stopped", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "network-online.target basic.target systemd-journald.socket system.slice", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "network-online.target system.slice", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:25:16,219 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,219 p=76552 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:25:16,219 p=76552 u=smogad593 |  task path: /Users/smogad593/Documents/ansible/roles/tesla.manage-services/tasks/main.yml:32
+2018-09-17 15:25:16,258 p=76552 u=smogad593 |  Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/systemd.py
+2018-09-17 15:25:16,324 p=76552 u=smogad593 |  Escalation succeeded
+2018-09-17 15:25:16,529 p=76552 u=smogad593 |  ok: [fluentd-1] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": true, 
+            "enabled": true, 
+            "force": null, 
+            "masked": false, 
+            "name": "td-agent", 
+            "no_block": false, 
+            "state": null, 
+            "user": false
+        }
+    }, 
+    "name": "td-agent", 
+    "status": {
+        "ActiveEnterTimestampMonotonic": "0", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "inactive", 
+        "After": "systemd-journald.socket network-online.target basic.target system.slice", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "no", 
+        "AssertTimestampMonotonic": "0", 
+        "Before": "shutdown.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "no", 
+        "ConditionTimestampMonotonic": "0", 
+        "Conflicts": "shutdown.target", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "td-agent: Fluentd based data collector for Treasure Data", 
+        "DevicePolicy": "auto", 
+        "Documentation": "https://docs.treasuredata.com/articles/td-agent", 
+        "Environment": "LD_PRELOAD=/opt/td-agent/embedded/lib/libjemalloc.so GEM_HOME=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ GEM_PATH=/opt/td-agent/embedded/lib/ruby/gems/2.4.0/ FLUENT_CONF=/etc/td-agent/td-agent.conf FLUENT_PLUGIN=/etc/td-agent/plugin FLUENT_SOCKET=/var/run/td-agent/td-agent.sock TD_AGENT_OPTIONS=", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "0", 
+        "ExecMainStartTimestampMonotonic": "0", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -HUP ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/opt/td-agent/embedded/bin/fluentd ; argv[]=/opt/td-agent/embedded/bin/fluentd --log /var/log/td-agent/td-agent.log --daemon /var/run/td-agent/td-agent.pid $TD_AGENT_OPTIONS ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -TERM ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/td-agent.service", 
+        "Group": "td-agent", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "td-agent.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestampMonotonic": "0", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "control-group", 
+        "KillSignal": "15", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "65536", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "0", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "td-agent.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "none", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PIDFile": "/var/run/td-agent/td-agent.pid", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "no", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "basic.target", 
+        "Restart": "always", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectory": "td-agent", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "dead", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "2min", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "forking", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "disabled", 
+        "User": "td-agent", 
+        "Wants": "network-online.target system.slice", 
+        "WatchdogTimestampMonotonic": "0", 
+        "WatchdogUSec": "0"
+    }
+}
+2018-09-17 15:25:16,530 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,531 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,534 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,535 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,537 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,538 p=76552 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:25:16,540 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,540 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,540 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,542 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,544 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,546 p=76552 u=smogad593 |  Read vars_file '../../group_vars/all/main.yml'
+2018-09-17 15:25:16,546 p=76552 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:25:16,548 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,549 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,549 p=76552 u=smogad593 |  META: ran handlers
+2018-09-17 15:25:16,549 p=76552 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:25:16,550 p=76552 u=smogad593 |  fluentd-1                  : ok=3    changed=0    unreachable=0    failed=0   
+2018-09-17 15:49:04,811 p=79610 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:04,833 p=79610 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 15:49:04,873 p=79610 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 15:49:05,696 p=79610 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:49:05,708 p=79610 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 15:49:08,501 p=79610 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 15:49:08,512 p=79610 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:49:08,841 p=79610 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:49:08,848 p=79610 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:08,854 p=79610 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:08,856 p=79610 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:49:08,856 p=79610 u=smogad593 |  fluentd-1                  : ok=3    changed=1    unreachable=0    failed=0   
+2018-09-17 15:49:20,893 p=79672 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:20,915 p=79672 u=smogad593 |  TASK [tesla.manage-services : Start service] *********************************************************************
+2018-09-17 15:49:21,799 p=79672 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 15:49:21,809 p=79672 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 15:49:22,331 p=79672 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 15:49:22,338 p=79672 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:22,344 p=79672 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:22,346 p=79672 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 15:49:22,346 p=79672 u=smogad593 |  fluentd-1                  : ok=2    changed=1    unreachable=0    failed=0   
+2018-09-17 15:49:29,690 p=79706 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:29,707 p=79706 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:29,713 p=79706 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 15:49:29,715 p=79706 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 16:35:05,902 p=87880 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 16:35:05,941 p=87880 u=smogad593 |  TASK [Gathering Facts] *******************************************************************************************
+2018-09-17 16:35:06,970 p=87880 u=smogad593 |  ok: [fluentd-2]
+2018-09-17 16:35:07,324 p=87880 u=smogad593 |  ok: [fluentd-3]
+2018-09-17 16:35:07,336 p=87880 u=smogad593 |  TASK [tesla.manage-services : Confirm before stopping service] ***************************************************
+2018-09-17 16:35:07,371 p=87880 u=smogad593 |  [tesla.manage-services : Confirm before stopping service]
+Are you sure you want to stop td-agent service? Press return to continue. Press Ctrl+c and then "a" to abort:
+2018-09-17 16:35:09,622 p=87880 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 16:35:09,634 p=87880 u=smogad593 |  TASK [tesla.manage-services : Stop service] **********************************************************************
+2018-09-17 16:35:11,080 p=87880 u=smogad593 |  changed: [fluentd-1]
+2018-09-17 16:35:11,143 p=87880 u=smogad593 |  changed: [fluentd-2]
+2018-09-17 16:35:11,166 p=87880 u=smogad593 |  changed: [fluentd-3]
+2018-09-17 16:35:11,179 p=87880 u=smogad593 |  TASK [tesla.manage-services : Enable service] ********************************************************************
+2018-09-17 16:35:11,768 p=87880 u=smogad593 |  ok: [fluentd-1]
+2018-09-17 16:35:11,769 p=87880 u=smogad593 |  ok: [fluentd-2]
+2018-09-17 16:35:11,776 p=87880 u=smogad593 |  ok: [fluentd-3]
+2018-09-17 16:35:11,785 p=87880 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 16:35:11,792 p=87880 u=smogad593 |  PLAY [fluentd-servers] *******************************************************************************************
+2018-09-17 16:35:11,794 p=87880 u=smogad593 |  PLAY RECAP *******************************************************************************************************
+2018-09-17 16:35:11,795 p=87880 u=smogad593 |  fluentd-1                  : ok=3    changed=1    unreachable=0    failed=0   
+2018-09-17 16:35:11,795 p=87880 u=smogad593 |  fluentd-2                  : ok=3    changed=1    unreachable=0    failed=0   
+2018-09-17 16:35:11,795 p=87880 u=smogad593 |  fluentd-3                  : ok=3    changed=1    unreachable=0    failed=0   
